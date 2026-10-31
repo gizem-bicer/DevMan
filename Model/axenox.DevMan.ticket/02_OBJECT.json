@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Ticket [axenox.DevMan.ticket]",
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2026-09-29 13:50:23",
+            "MODIFIED_ON": "2026-10-28 08:22:03",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11efa72c1fb56dfea72c025041000001",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -337,10 +337,8 @@
                                                 "*/": ""
                                             },
                                             {
-                                                "widget_type": "DataTable",
+                                                "widget_type": "CommentsFeed",
                                                 "object_alias": "axenox.DevMan.ticket_comment",
-                                                "empty_text": "No issues were found while testing this test case.",
-                                                "paginate": false,
                                                 "height": 10,
                                                 "caption": "Comments",
                                                 "filters": [
@@ -354,51 +352,15 @@
                                                 ],
                                                 "columns": [
                                                     {
-                                                        "attribute_alias": "created_on",
-                                                        "width_max": "140px"
-                                                    },
-                                                    {
-                                                        "attribute_alias": "created_by_user__FULL_NAME",
-                                                        "width_max": "150px"
-                                                    },
-                                                    {
-                                                        "attribute_alias": "comment_type"
-                                                    },
-                                                    {
-                                                        "attribute_alias": "action_required"
-                                                    },
-                                                    {
-                                                        "attribute_alias": "comment",
-                                                        "width": "max"
+                                                        "attribute_alias": "ticket",
+                                                        "value": "=field_ticket_id",
+                                                        "hidden": true
                                                     }
                                                 ],
                                                 "sorters": [
                                                     {
                                                         "attribute_alias": "created_on",
                                                         "direction": "desc"
-                                                    }
-                                                ],
-                                                "buttons": [
-                                                    {
-                                                        "input_widget_id": "field_ticket_id",
-                                                        "action": {
-                                                            "alias": "exface.core.ShowObjectCreateDialog",
-                                                            "prefill_with_input_data": true,
-                                                            "input_mapper": {
-                                                                "from_object_alias": "axenox.DevMan.ticket",
-                                                                "to_object_alias": "axenox.DevMan.ticket_comment",
-                                                                "column_to_column_mappings": [
-                                                                    {
-                                                                        "from": "id",
-                                                                        "to": "ticket"
-                                                                    }
-                                                                ]
-                                                            }
-                                                        }
-                                                    },
-                                                    {
-                                                        "action_alias": "exface.core.ShowObjectEditDialog",
-                                                        "bind_to_double_click": true
                                                     }
                                                 ]
                                             }
